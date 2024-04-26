@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Trek Mountain Bikes</title>
+            <link rel="stylesheet" href="./index.css">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+            </style>
+            <script src="./index.js" defer></script>
+            <script src="https://kit.fontawesome.com/de686a991a.js" crossorigin="anonymous"></script>
+        </head>
+    <body>
+        <header>
+            <nav>
+                <div class="left">
+                    <a href="#" class="logo-link">
+                        <img src='./assets/logo.png' alt="Site logo" id='logo' />
+                    </a>
+                    <a href="./about.html" class="header-link full-nav" >About Us</a>
+                </div>
+                <div class="center">
+                    <a href="#" ><h1>Trek Mountain Bikes</h1></a>
+                    <p class="logo-text " >Bicycles perfect for every use</p>
+                </div>
+                <div class="right">
+                    <a class="open-link-modal header-link full-nav">Shop</a>
+                    <a class="open-link-modal header-link full-nav text-cart" >Cart</a>
+                    <a class="open-link-modal header-link full-nav" id="icon-cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+                    <i class="fa-solid fa-bars" id="nav-expander"></i>
+                    <!-- <p id="nav-expander">Menu</p> -->
+                </div>
+            </nav>
+            <div class="narrow-nav"  >
+                <a class="open-link-modal header-link toggled-nav">Shop</a>
+                <a class="open-link-modal header-link toggled-nav" >Cart</a>
+                <a href="./about.html" class="header-link toggled-nav" >About Us</a>
+            </div>
+        </header>
+        <main>
+            <a class="open-link-modal main-browse"><h2>Browse all of our Products to find what you're looking for.</h2></a>
+            <p>Or</p>
+            <h2>See Our Currently Featured Product</h2>
+            <div class="card" id="product-card">
+                <h3>Bulls B&amp;W Mountain Bike</h3>
+                <figure>
+                    <img srcset="
+                        ./assets/mountain-bike-1024.jpg 1024w,
+                        ./assets/mountain-bike-640.jpg 640w,
+                        ./assets/mountain-bike-200.jpg 200w
+                    " 
+                    sizes="
+                        (min-width: 1024px) 1024px,
+                        (min-width: 640px) 640px,
+                        (min-width: 200px) 200px
+                    "
+                    alt="a mountain bike">
+                    <figcaption><a href="https://renopenrose.getarchive.net/media/mountain-bike-bike-white-7d2fe7" class="stock-attribution">Image by Hans on Pixabay</a></figcaption>
+                </figure>
+                <p><b>Description:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sed libero enim sed.</p>
+                <p><b>Price:</b> $3000</p>
+                <div class="card-button-container" >
+                    <button class="card-button open-link-modal" ><a>See More Details</a></button>
+                    <button class="card-button add-to-cart" >Add to Cart</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p><sup>&copy;</sup> Richard Massengale 2024</p>
+            <button class="open-modal" id="open-news-modal" >Subscribe to our Newsletter</button>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="footer-icon-link"><i class="fa-brands fa-facebook fa-2xs footer-link"></i></a>
+                <!-- <a href="https://www.facebook.com" target="_blank" class="footer-icon-link">FaceBook</a> -->
+                <a href="https://www.twitter.com" target="_blank" class="footer-icon-link"><i class="fa-brands fa-twitter fa-2xs footer-link"></i></a>
+                <!-- <a href="https://www.twitter.com" target="_blank" class="footer-icon-link">Twitter</a> -->
+                <a href="https://www.linkedin.com" target="_blank" class="footer-icon-link"><i class="fa-brands fa-linkedin fa-2xs footer-link"></i></a>
+                <!-- <a href="https://www.linkedin.com" target="_blank" class="footer-icon-link">LinkedIn</a> -->
+                <a href="./about.html" class="footer-link footer-about">About Us</a>
+            </div>
+        </footer>
+        <div id="no-link-modal" class="modal">
+            <div class="modal-content">
+                <h3 class="modal-header">Apologies</h3>
+                <p class="modal-text" >At present this link does not work.</p>
+                <button class="close-modal" id="close-link-modal">Close</button>
+            </div>
+        </div>
+        <div id="newsletter-modal" class="modal">
+            <div class="modal-content">
+                <form>
+                    <h3>Sign up for our Newsletter.</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                    <button class="close-modal" id="subscribe-news-modal" type="button">Subscribe</button>
+                </form>
+                <button class="close-modal" id="close-news-modal">Close</button>
+            </div>
+        </div>
+    </body>
+</html>

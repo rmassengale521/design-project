@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trek Mountain Bikes</title>
+        <link rel="stylesheet" href="./index.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+        </style>
+        <script src="./index.js" defer></script>
+        <script src="https://kit.fontawesome.com/de686a991a.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="left">
+                    <a href="./index.html" class="logo-link">
+                        <img src='./assets/logo.png' alt="Site logo" id='logo' />
+                    </a>
+                    <a href="#" class="header-link full-nav" >About Us</a>
+                </div>
+                <div class="center">
+                    <a href="./index.html" ><h1>Trek Mountain Bikes</h1></a>
+                    <p class="logo-text " >Bicycles perfect for every use</p>
+                </div>
+                <div class="right">
+                    <a class="open-link-modal header-link full-nav">Shop</a>
+                    <a class="open-link-modal header-link full-nav text-cart" >Cart</a>
+                    <a class="open-link-modal header-link full-nav" id="icon-cart"><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
+                    <i class="fa-solid fa-bars" id="nav-expander"></i>
+                    <!-- <p id="nav-expander">Menu</p> -->
+                </div>
+            </nav>
+            <div class="narrow-nav"  >
+                <a class="open-link-modal header-link toggled-nav">Shop</a>
+                <a class="open-link-modal header-link toggled-nav" >Cart</a>
+                <a href="#" class="header-link toggled-nav" >About Us</a>
+            </div>
+        </header>
+        <main>
+            <div class="info-card card">
+                <h2>Meet our Team</h2>
+                <figure>
+                    <img srcset="
+                        ./assets/corporate-1000.jpg 200w,
+                        ./assets/corporate-1500.jpg 640w,
+                        ./assets/corporate-2000.jpg 1024w
+                    " 
+                    sizes="
+                        (min-width: 1024px) 1024px,
+                        (min-width: 640px) 640px,
+                        (max-width: 639px) 200px
+                    "
+                    alt="Our corporate leaders">
+                    <figcaption><a href="https://www.freepik.com/free-photo/young-businesswoman-with-co-workers_860260.htm#fromView=search&page=1&position=7&uuid=98199df4-03a0-4b27-b419-3c9c4832c983" class="stock-attribution">Image by pressfoto on Freepik</a></figcaption>
+                </figure>
+                <h3>This company was made by cyclists, for cyclists.</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl condimentum id venenatis a condimentum vitae sapien pellentesque. Nisl purus in mollis nunc sed id semper. Tincidunt eget nullam non nisi est sit amet facilisis. Turpis nunc eget lorem dolor sed viverra ipsum. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Nisl rhoncus mattis rhoncus urna neque viverra justo. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Egestas sed sed risus pretium. Erat velit scelerisque in dictum non consectetur a erat. Quis vel eros donec ac odio tempor orci dapibus ultrices. Feugiat sed lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Vel eros donec ac odio tempor orci. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. In pellentesque massa placerat duis ultricies lacus sed turpis. Tristique risus nec feugiat in fermentum posuere urna. Pellentesque habitant morbi tristique senectus et netus et malesuada. Vulputate ut pharetra sit amet aliquam. Sed enim ut sem viverra aliquet eget.
+                </p>
+            </div>
+            <button class="open-modal" id="open-contact-modal">Contact Us</button>
+        </main>
+        <footer>
+            <p><sup>&copy;</sup> Richard Massengale 2024</p>
+            <button class="open-modal" id="open-news-modal" >Subscribe to our Newsletter</button>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="footer-icon-link"><i class="fa-brands fa-facebook fa-2xs footer-link"></i></a>
+                <!-- <a href="https://www.facebook.com" target="_blank" class="footer-icon-link footer-link-ph">FaceBook</a> -->
+                <a href="https://www.twitter.com" target="_blank" class="footer-icon-link"><i class="fa-brands fa-twitter fa-2xs footer-link"></i></a>
+                <!-- <a href="https://www.twitter.com" target="_blank" class="footer-icon-link footer-link-ph">Twitter</a> -->
+                <a href="https://www.linkedin.com" target="_blank" class="footer-icon-link"><i class="fa-brands fa-linkedin fa-2xs footer-link"></i></a>
+                <!-- <a href="https://www.linkedin.com" target="_blank" class="footer-icon-link footer-link-ph">LinkedIn</a> -->
+                <a href="#" class="footer-link footer-about">About Us</a>
+            </div>
+        </footer>
+        <div id="no-link-modal" class="modal">
+            <div class="modal-content">
+                <h3 class="modal-header">Apologies</h3>
+                <p class="modal-text" >At present this link does not work.</p>
+                <button class="close-modal" id="close-link-modal">Close</button>
+            </div>
+        </div>
+        <div id="contact-modal" class="modal">
+            <div class="modal-content">
+                <form>
+                    <h3>Call us at <span class="contact-phone">1-800-555-1234</span> or send us a message below.</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <button class="close-modal" id="submit-form-modal" type="button">Send</button>
+                </form>
+                <button class="close-modal" id="close-form-modal">Close</button>
+            </div>
+        </div>
+        <div id="newsletter-modal" class="modal">
+            <div class="modal-content">
+                <form>
+                    <h3>Sign up for our Newsletter.</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                    <button class="close-modal" id="subscribe-news-modal" type="button">Subscribe</button>
+                </form>
+                <button class="close-modal" id="close-news-modal">Close</button>
+            </div>
+        </div>
+    </body>
+</html>
